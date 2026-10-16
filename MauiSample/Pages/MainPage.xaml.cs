@@ -2,7 +2,7 @@
 using MauiSample.PageModels;
 
 //xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
-namespace MauiSample
+namespace MauiSample.Pages
 {
     public partial class MainPage : ContentPage
     {
@@ -14,7 +14,7 @@ namespace MauiSample
             Loaded += MainPage_Loaded;
         }
 
-        DeviceHolder DeviceHolder { get; set; }
+        private DeviceHolder DeviceHolder { get; set; }
 
         protected override void OnAppearing()
         {

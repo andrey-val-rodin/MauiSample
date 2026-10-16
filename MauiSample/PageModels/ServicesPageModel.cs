@@ -7,7 +7,7 @@ namespace MauiSample.PageModels
 {
     public partial class ServicesPageModel(DeviceHolder deviceHolder) : ObservableObject
     {
-        DeviceHolder DeviceHolder { get; set; } = deviceHolder;
+        public DeviceHolder DeviceHolder { get; set; } = deviceHolder;
 
         [ObservableProperty]
         public partial bool IsBusy { get; set; }
@@ -21,7 +21,7 @@ namespace MauiSample.PageModels
         public partial MyService? Item { get; set; }
 
         [RelayCommand]
-        async Task GetServicesAsync()
+        private async Task GetServicesAsync()
         {
             IsBusy = true;
             try
@@ -49,7 +49,7 @@ namespace MauiSample.PageModels
         }
 
         [RelayCommand]
-        async Task ExploreServiceAsync(MyService? service)
+        private async Task ExploreServiceAsync(MyService? service)
         {
             if (service == null)
                 return;

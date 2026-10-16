@@ -6,7 +6,7 @@ using NativeCharacteristic = Plugin.BLE.Abstractions.Contracts.ICharacteristic;
 namespace MauiSample.Models
 {
     public partial class MyCharacteristic(NativeCharacteristic nativeCharacteristic)
-                : ObservableObject
+        : ObservableObject
     {
         private bool _isNotifying = false;
 
